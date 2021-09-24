@@ -54,11 +54,8 @@ const PanelFooter: React.FC<Props> = ({
   pushNav,
   toggleTheme,
   isDark,
-  cakePriceUsd,
-  tablePriceUsd, 
-  legendPriceUsd, 
-  squirePriceUsd,
-  shillingPriceUsd,
+  solidPriceUsd,
+  xsolidPriceUsd,
   currentLang,
   langs,
   setLang,
@@ -76,7 +73,7 @@ const PanelFooter: React.FC<Props> = ({
   return (
     <Container>
       <SocialEntry>
-        {shillingPriceUsd ? (
+        {solidPriceUsd ? (
           <PriceLink href="https://pancakeswap.info/token/" target="_blank">
             <img
               src="https://ipfs.io/ipfs/Qmey8kWdYJEj5VSQqBqj2aAkga9tzEZKk8ddCAmDSTDDot?filename=shilling.svg"
@@ -87,7 +84,7 @@ const PanelFooter: React.FC<Props> = ({
               }}
             />
 
-            <Text color="textSubtle" bold>{`$${shillingPriceUsd.toFixed(8)}`}</Text>
+            <Text color="textSubtle" bold>{`$${solidPriceUsd.toFixed(8)}`}</Text>
           </PriceLink>
         ) : (
           <Skeleton width={80} height={24}>
@@ -103,7 +100,7 @@ const PanelFooter: React.FC<Props> = ({
         )}
       </SocialEntry>
       <SocialEntry>
-        {squirePriceUsd ? (
+        {xsolidPriceUsd ? (
           <PriceLink href="https://pancakeswap.info/token/0x2F0D21f1B84F03fB9D60004fc206C86Be6902a32" target="_blank">
             <img
               src="https://ipfs.io/ipfs/QmSMJy9D5MXrWsKDuZLrJNoxH5Rp55mSpAUzu48zFhjYfr?filename=squire.png"
@@ -114,88 +111,13 @@ const PanelFooter: React.FC<Props> = ({
               }}
             />
 
-            <Text color="textSubtle" bold>{`$${squirePriceUsd.toFixed(5)}`}</Text>
+            <Text color="textSubtle" bold>{`$${xsolidPriceUsd.toFixed(5)}`}</Text>
           </PriceLink>
         ) : (
           <Skeleton width={80} height={24}>
           <img
               src="https://ipfs.io/ipfs/QmSMJy9D5MXrWsKDuZLrJNoxH5Rp55mSpAUzu48zFhjYfr?filename=squire.png"
               alt="SQUIRE Logo"
-              style={{
-                width: "24px",
-                marginRight: "8px",
-              }}
-            />
-          </Skeleton>
-        )}
-        {cakePriceUsd ? (
-          <PriceLink href="https://pancakeswap.info/token/0x16C0e0936E1B38Ff1F9b8a1e75d8ba29aDf87d30" target="_blank">
-            <img
-              src="https://ipfs.io/ipfs/QmREFZU2mdg1Sv1Q2Ma8sB63uWBN9MsJ1WULWZ1Q1vk2ND?filename=knight.png"
-              alt="KNIGHT Logo"
-              style={{
-                width: "24px",
-                marginRight: "8px",
-              }}
-            />
-
-            <Text color="textSubtle" bold>{`$${cakePriceUsd.toFixed(4)}`}</Text>
-          </PriceLink>
-        ) : (
-          <Skeleton width={80} height={24}>
-          <img
-              src="https://ipfs.io/ipfs/QmREFZU2mdg1Sv1Q2Ma8sB63uWBN9MsJ1WULWZ1Q1vk2ND?filename=knight.png"
-              alt="KNIGHT Logo"
-              style={{
-                width: "24px",
-                marginRight: "8px",
-              }}
-            />
-          </Skeleton>
-        )}
-      </SocialEntry>
-      <SocialEntry>
-        {legendPriceUsd ? (
-          <PriceLink href="https://pancakeswap.info/token/0xDc661984735b535210CB1f52f86cc58616024192" target="_blank">
-            <img
-              src="https://ipfs.io/ipfs/QmdUYMd2jcqxAauh9spWr181SN8iguonMaFszWedcuwiD9?filename=legend.png"
-              alt="LEGEND Logo"
-              style={{
-                width: "24px",
-                marginRight: "8px",
-              }}
-            />
-            <Text color="textSubtle" bold>{`$${legendPriceUsd.toFixed(2)}`}</Text>
-          </PriceLink>
-        ) : (
-          <Skeleton width={80} height={24}>
-          <img
-              src="https://ipfs.io/ipfs/QmdUYMd2jcqxAauh9spWr181SN8iguonMaFszWedcuwiD9?filename=legend.png"
-              alt="LEGEND Logo"
-              style={{
-                width: "24px",
-                marginRight: "8px",
-              }}
-            />
-          </Skeleton>
-        )}
-        {tablePriceUsd ? (
-          <PriceLink href="https://pancakeswap.info/token/0xf5a2f7418035ce76967f515f39d65719bb0453b6" target="_blank">
-            <img
-              src="https://ipfs.io/ipfs/QmXv83F1Qp1kv812msr2QfcHh8Uh5S1Gb1XeH5qZFS8EVV?filename=table.png"
-              alt="TABLE Logo"
-              style={{
-                width: "24px",
-                marginRight: "8px",
-              }}
-            />
-            <Text color="textSubtle" bold>{`$${tablePriceUsd.toFixed(1)}`}</Text>
-          </PriceLink>
-        ) : (
-          <Skeleton width={80} height={24}>
-          <img
-              src="https://ipfs.io/ipfs/QmXv83F1Qp1kv812msr2QfcHh8Uh5S1Gb1XeH5qZFS8EVV?filename=table.png"
-              alt="TABLE Logo"
               style={{
                 width: "24px",
                 marginRight: "8px",

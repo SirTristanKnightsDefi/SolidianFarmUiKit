@@ -41,11 +41,8 @@ export interface MenuEntry {
 export interface PanelProps {
   isDark: boolean;
   toggleTheme: (isDark: boolean) => void;
-  cakePriceUsd?: number;
-  tablePriceUsd?: number;
-  legendPriceUsd?: number;
-  squirePriceUsd?: number;
-  shillingPriceUsd?: number;
+  solidPriceUsd?: number;
+  xsolidPriceUsd?: number;
   currentLang: string;
   langs: LangType[];
   setLang: (lang: LangType) => void;

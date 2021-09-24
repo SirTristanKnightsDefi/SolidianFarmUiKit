@@ -2578,14 +2578,14 @@ var socials = [
         items: [
             {
                 label: "English",
-                href: "https://t.me/KnightsOfTheRoundBSCChat",
+                href: "https://t.me/Solidian",
             },
         ],
     },
     {
         label: "Twitter",
         icon: "TwitterIcon",
-        href: "https://twitter.com/Knightsbsc",
+        href: "https://twitter.com/SoIidian",
     },
 ];
 var MENU_HEIGHT = 64;
